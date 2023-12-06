@@ -1,8 +1,5 @@
-# React + Vite
+# React Components (tailwind)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repo is a bunch of useful react components found commonly across the internet. Due to their popular use, I though it might be useful for anyone who wants to add one to their site. Feel free to use any components if you like them but please try to credit this repo. I tried to make these as modular as I could and included some documentation to help beginners.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Learn how to use tailwind with your react project](https://tailwindcss.com/docs/installation/framework-guides)

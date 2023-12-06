@@ -1,0 +1,28 @@
+.carousel {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 80vh;
+  height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  cursor: pointer;
+  background: rgba(225, 225, 225, 0.4);
+}
+.carousel-buttons:hover {
+  background: rgba(225, 225, 225, 0.6);
+}
+.nav-dots {
+  width: fit-content;
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
