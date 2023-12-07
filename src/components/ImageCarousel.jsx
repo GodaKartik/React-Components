@@ -1,17 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/ImageCarousel.css";
 
 const ImageCarousel = ({ images }) => {
+  const div_ref = useRef(null);
   const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((value) => (value === images.length - 1 ? 0 : value + 1));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIndex((value) => (value === images.length - 1 ? 0 : value + 1));
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, []);
+
+  // useEffect(() => {}, [index]);
+
   return (
     <div>
       <div
+        ref={div_ref}
         className="carousel"
         style={{
           backgroundImage: `url(${images[index]})`,
