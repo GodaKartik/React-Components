@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/ImageCarousel.css";
 
 const ImageCarousel = ({ images }) => {
   const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((value) => (value === images.length - 1 ? 0 : value + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
       <div
@@ -34,7 +40,7 @@ const ImageCarousel = ({ images }) => {
       </div>
       <div className="nav-dots">
         {images.map((_, position) => {
-          return <img src={position === index ? "checked.svg" : "unchecked.svg"} alt="" />;
+          return <img src={position === index ? "checked.svg" : "unchecked.svg"} alt="navigation dots for carousel" />;
         })}
       </div>
     </div>
